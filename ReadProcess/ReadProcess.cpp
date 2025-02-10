@@ -24,7 +24,7 @@ int main()
 
     while (true)
     {
-        BOOL ReadAddress = ReadProcessMemory(ProcessHandle, (LPCVOID)MemoryAddress, &MemoryData, sizeof(int), false); //Read the address and save decimal into int MemoryData.
+        BOOL ReadAddress = ReadProcessMemory(ProcessHandle, (LPCVOID)MemoryAddress, &MemoryData, sizeof(int), NULL); //Read the address and save decimal into int MemoryData.
         if (!ReadAddress)
         {
             cout << "Cant Read Process Memory" << endl;
